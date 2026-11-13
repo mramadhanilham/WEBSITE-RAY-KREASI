@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f4ed" />
+  <meta name="description" content="Ray Kreasi menghadirkan tas anyam handmade dan tas eco-fashion dari serat daun nanas lokal Kubu Raya, Kalimantan Barat." />
+  <title>Ray Kreasi — Tas Handmade & Pineapple Fiber Eco-Fashion</title>
+  <style>
+    :root {
+      --paper: #f7f4ed;
+      --paper-2: #eee9de;
+      --white: #fffefa;
+      --ink: #242823;
+      --muted: #77786f;
+      --line: #ded9ce;
+      --olive: #52624b;
+      --olive-dark: #344235;
+      --olive-soft: #e2e7dc;
+      --clay: #bc8062;
+      --rose: #bd5573;
+      --gold: #b6945c;
+      --shadow: 0 18px 55px rgba(49, 48, 39, .10);
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+      --max: 1320px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; }
+    img { display: block; max-width: 100%; }
+    .announcement { background: var(--olive-dark); color: #f7f4ed; text-align: center; letter-spacing: .16em; text-transform: uppercase; font-size: 10px; font-weight: 700; padding: 9px 14px; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(247,244,237,.95); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(75,75,60,.12); }
+    .header-inner { max-width: var(--max); height: 82px; margin: auto; padding: 0 34px; display: grid; grid-template-columns: 230px 1fr 180px; align-items: center; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; width: fit-content; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid rgba(189,85,115,.55); border-radius: 50%; color: var(--rose); font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1; transform: rotate(-8deg); }
+    .brand-copy { display: flex; flex-direction: column; line-height: 1.05; }
+    .brand-name { font-family: var(--serif); font-size: 24px; letter-spacing: .01em; }
+    .brand-sub { margin-top: 5px; color: var(--muted); font-size: 8px; letter-spacing: .2em; text-transform: uppercase; }
+    .main-nav { display: flex; justify-content: center; align-items: center; gap: clamp(18px, 3vw, 42px); }
+    .main-nav a { position: relative; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: #363a33; padding: 9px 0; }
+    .main-nav a::after { content: ''; position: absolute; bottom: 2px; left: 0; width: 0; height: 1px; background: var(--rose); transition: width .25s ease; }
+    .main-nav a:hover::after, .main-nav a:focus-visible::after { width: 100%; }
+    .header-actions { display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
+    .icon-button { width: 42px; height: 42px; border: 0; background: transparent; color: var(--ink); display: grid; place-items: center; position: relative; border-radius: 50%; transition: background .2s; }
+    .icon-button:hover { background: var(--paper-2); }
+    .icon-button svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; }
+    .count-dot { position: absolute; top: 5px; right: 4px; width: 15px; height: 15px; display: grid; place-items: center; background: var(--rose); color: white; border-radius: 50%; font-size: 9px; font-weight: 800; }
+    .mobile-toggle { display: none; }
+
+    .hero { overflow: hidden; position: relative; background: #e9e5d9; }
+    .hero-inner { min-height: 590px; max-width: var(--max); margin: auto; padding: 70px 34px 72px; display: grid; grid-template-columns: .93fr 1.07fr; align-items: center; gap: 5.5%; }
+    .hero-copy { position: relative; z-index: 2; max-width: 520px; padding-left: 3.5%; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--olive); text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: .2em; }
+    .eyebrow::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 { margin: 23px 0 22px; max-width: 570px; font-family: var(--serif); font-size: clamp(50px, 5.4vw, 78px); line-height: .99; letter-spacing: -.045em; font-weight: 400; }
+    .hero h1 em { color: var(--olive); font-weight: 400; }
+    .hero-copy p { max-width: 420px; color: #5f6259; font-size: 15px; line-height: 1.8; }
+    .button-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+    .btn { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 12px; border: 1px solid transparent; padding: 0 22px; text-transform: uppercase; font-size: 10px; font-weight: 800; letter-spacing: .13em; transition: all .22s ease; }
+    .btn-primary { color: #fff; background: var(--olive-dark); }
+    .btn-primary:hover { background: #263528; transform: translateY(-2px); }
+    .btn-outline { border-color: rgba(52,66,53,.35); color: var(--olive-dark); background: transparent; }
+    .btn-outline:hover { background: #fffefa; border-color: var(--olive-dark); }
+    .btn .arrow { font-size: 18px; line-height: 0; }
+    .hero-art { min-height: 440px; position: relative; display: flex; justify-content: center; align-items: center; }
+    .hero-frame { width: min(100%, 570px); height: 470px; position: relative; overflow: hidden; background: #d8d2c4; }
+    .hero-frame::before { content: ''; position: absolute; z-index: 1; inset: 16px; border: 1px solid rgba(255,255,255,.65); pointer-events: none; }
+    .hero-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 58%; filter: saturate(.86); }
+    .hero-stamp { position: absolute; z-index: 2; width: 132px; height: 132px; border-radius: 50%; right: -8px; bottom: 8px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--olive-dark); background: var(--paper); border: 1px solid rgba(182,148,92,.75); outline: 5px solid rgba(247,244,237,.65); font-family: var(--serif); font-size: 18px; line-height: 1.1; transform: rotate(9deg); }
+    .hero-stamp span { display: block; font-family: var(--sans); font-size: 8px; text-transform: uppercase; letter-spacing: .12em; margin-top: 6px; }
+    .hero-note { position: absolute; left: -24px; bottom: 25px; writing-mode: vertical-rl; transform: rotate(180deg); color: #7d7d70; font-size: 9px; letter-spacing: .2em; text-transform: uppercase; }
+
+    .promise-bar { background: var(--olive-dark); color: #f5f0e7; }
+    .promise-inner { max-width: var(--max); margin: auto; padding: 18px 34px; display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .promise-item { display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
+    .promise-item svg { width: 20px; height: 20px; stroke: #c8b387; fill: none; stroke-width: 1.35; }
+
+    .section { max-width: var(--max); margin: auto; padding: 100px 34px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 38px; }
+    .section-heading h2 { margin: 13px 0 0; font-family: var(--serif); font-size: clamp(38px,4vw,54px); line-height: 1.05; font-weight: 400; letter-spacing: -.035em; }
+    .section-heading p { max-width: 390px; margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .text-link { display: inline-flex; align-items: center; gap: 10px; color: var(--olive-dark); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; border-bottom: 1px solid var(--gold); padding-bottom: 7px; }
+    .text-link span { font-size: 16px; }
+
+    .collection-intro { background: var(--white); }
+    .collection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .collection-card { position: relative; min-height: 390px; overflow: hidden; background: var(--paper-2); }
+    .collection-card img { width: 100%; height: 100%; min-height: 390px; object-fit: cover; transition: transform .6s cubic-bezier(.2,.75,.2,1); }
+    .collection-card:first-child img { object-position: center 55%; }
+    .collection-card:hover img { transform: scale(1.04); }
+    .collection-card::after { content: ''; position: absolute; inset: 30% 0 0; background: linear-gradient(transparent, rgba(26,32,25,.68)); }
+    .collection-card-content { position: absolute; z-index: 2; left: 34px; bottom: 30px; color: #fff; }
+    .collection-card-content small { text-transform: uppercase; letter-spacing: .18em; font-size: 9px; font-weight: 800; }
+    .collection-card-content h3 { margin: 9px 0 13px; font-family: var(--serif); font-size: 36px; font-weight: 400; }
+    .collection-card-content .text-link { color: white; border-color: rgba(255,255,255,.7); }
+
+    .catalog-layout { display: grid; grid-template-columns: 215px 1fr; gap: 42px; align-items: start; }
+    .filter-panel { border-top: 1px solid var(--line); padding-top: 20px; }
+    .filter-group { padding: 0 0 24px; margin-bottom: 23px; border-bottom: 1px solid var(--line); }
+    .filter-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+    .filter-title button { color: var(--muted); border: 0; background: none; font-size: 10px; text-decoration: underline; }
+    .filter-option { display: flex; align-items: center; gap: 10px; padding: 7px 0; color: #55584f; font-size: 12px; cursor: pointer; }
+    .filter-option input { width: 15px; height: 15px; accent-color: var(--olive); }
+    .filter-note { color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .catalog-toolbar { min-height: 55px; display: flex; justify-content: space-between; align-items: center; gap: 15px; border-bottom: 1px solid var(--line); margin-bottom: 24px; padding: 0 0 14px; }
+    .results-count { color: #5c6058; font-size: 12px; }
+    .toolbar-controls { display: flex; align-items: center; gap: 18px; }
+    .toolbar-controls label { font-size: 11px; color: var(--muted); }
+    select, .search-input { border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); padding: 7px 22px 7px 4px; outline: none; font-size: 12px; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 30px 20px; }
+    .product-card { min-width: 0; position: relative; }
+    .product-photo { position: relative; overflow: hidden; background: #ece8de; aspect-ratio: .88; }
+    .product-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.75,.2,1); }
+    .product-card:hover .product-photo img { transform: scale(1.045); }
+    .product-badge { position: absolute; top: 13px; left: 13px; z-index: 2; padding: 7px 10px; background: rgba(255,254,250,.91); color: var(--olive-dark); font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .wish-button { position: absolute; z-index: 2; right: 11px; top: 10px; display: grid; place-items: center; width: 34px; height: 34px; border: 0; border-radius: 50%; background: rgba(255,254,250,.88); color: var(--ink); font-size: 17px; }
+    .wish-button.active { color: var(--rose); }
+    .quick-view { position: absolute; z-index: 3; bottom: 12px; left: 12px; right: 12px; width: calc(100% - 24px); border: 0; background: rgba(255,254,250,.95); padding: 12px 8px; color: var(--ink); text-transform: uppercase; font-size: 9px; font-weight: 800; letter-spacing: .13em; opacity: 0; transform: translateY(8px); transition: all .25s ease; }
+    .product-card:hover .quick-view, .quick-view:focus-visible { opacity: 1; transform: translateY(0); }
+    .product-info { padding: 14px 2px 0; }
+    .product-category { color: var(--muted); text-transform: uppercase; font-size: 9px; font-weight: 700; letter-spacing: .14em; }
+    .product-name { margin: 5px 0 4px; font-family: var(--serif); font-size: 19px; font-weight: 400; line-height: 1.2; }
+    .product-caption { color: var(--muted); font-size: 11px; min-height: 20px; }
+    .product-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 9px; }
+    .price-text { font-size: 11px; color: var(--olive-dark); font-weight: 700; }
+    .order-mini { border: 0; background: none; padding: 4px 0; color: var(--rose); font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .order-mini:hover { text-decoration: underline; }
+    .empty-state { display: none; padding: 60px 20px; text-align: center; border: 1px dashed var(--line); color: var(--muted); }
+    .empty-state strong { display: block; margin-bottom: 5px; color: var(--ink); font-family: var(--serif); font-size: 25px; font-weight: 400; }
+
+    .story-section { background: var(--olive-dark); color: #f6f3eb; }
+    .story-inner { max-width: var(--max); margin: auto; padding: 100px 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 7%; align-items: center; }
+    .story-visual { position: relative; min-height: 520px; }
+    .story-visual-main { position: absolute; left: 0; top: 0; width: 72%; height: 420px; object-fit: cover; }
+    .story-visual-small { position: absolute; right: 0; bottom: 0; width: 47%; height: 265px; object-fit: cover; border: 8px solid var(--olive-dark); }
+    .story-copy .eyebrow { color: #d6c29a; }
+    .story-copy h2 { margin: 18px 0 23px; font-family: var(--serif); font-weight: 400; font-size: clamp(42px,4.4vw,58px); line-height: 1.05; letter-spacing: -.035em; }
+    .story-copy h2 em { color: #d6c29a; }
+    .story-copy p { color: rgba(246,243,235,.77); font-size: 13px; line-height: 1.9; }
+    .story-copy .btn { margin-top: 18px; border-color: rgba(255,255,255,.52); color: white; }
+    .story-copy .btn:hover { color: var(--olive-dark); background: white; }
+
+    .process-section { background: #efebe1; }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 17px; margin-top: 40px; }
+    .process-step { background: var(--white); padding-bottom: 18px; }
+    .process-step img { width: 100%; height: 190px; object-fit: cover; }
+    .step-number { display: block; margin: 17px 18px 4px; color: var(--gold); font-family: var(--serif); font-size: 22px; }
+    .process-step h3 { margin: 0 18px 7px; font-family: var(--serif); font-size: 20px; font-weight: 400; }
+    .process-step p { margin: 0 18px; color: var(--muted); font-size: 11px; line-height: 1.65; }
+    .process-note { margin: 24px 0 0; color: var(--muted); font-size: 11px; }
+
+    .values { background: var(--white); }
+    .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 38px; }
+    .value-card { background: var(--white); padding: 30px 27px; }
+    .value-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 18px; border: 1px solid #d8d2c3; border-radius: 50%; color: var(--olive); font-family: var(--serif); font-size: 20px; }
+    .value-card h3 { margin-bottom: 8px; font-family: var(--serif); font-size: 22px; font-weight: 400; }
+    .value-card p { margin-bottom: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+
+    .contact-section { max-width: var(--max); padding: 84px 34px 94px; margin: auto; }
+    .contact-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding: 54px 58px; background: var(--paper-2); }
+    .contact-card::after { content: 'RK'; position: absolute; right: 18%; top: -84px; color: rgba(182,148,92,.11); font-family: var(--serif); font-size: 280px; line-height: 1; pointer-events: none; }
+    .contact-card .eyebrow { position: relative; z-index: 1; }
+    .contact-card h2 { position: relative; z-index: 1; max-width: 610px; margin: 13px 0 8px; font-family: var(--serif); font-size: clamp(36px,4.2vw,54px); font-weight: 400; line-height: 1.05; }
+    .contact-card p { position: relative; z-index: 1; max-width: 520px; margin: 0; color: var(--muted); font-size: 13px; }
+    .contact-card .btn { position: relative; z-index: 1; white-space: nowrap; }
+
+    footer { background: #273329; color: #f4f0e8; }
+    .footer-main { max-width: var(--max); margin: auto; padding: 60px 34px 45px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; }
+    .footer-brand .brand-name { font-size: 28px; }
+    .footer-brand .brand-sub { color: #c5c0b4; }
+    .footer-brand p { max-width: 280px; margin: 18px 0 0; color: rgba(244,240,232,.68); font-size: 12px; line-height: 1.8; }
+    .footer-col h4 { margin: 4px 0 17px; color: #d6c29a; text-transform: uppercase; letter-spacing: .15em; font-size: 10px; }
+    .footer-col a, .footer-col p { display: block; margin: 0 0 10px; color: rgba(244,240,232,.78); font-size: 12px; line-height: 1.65; }
+    .footer-col a:hover { color: white; text-decoration: underline; }
+    .footer-bottom { max-width: var(--max); margin: auto; padding: 17px 34px 22px; border-top: 1px solid rgba(255,255,255,.13); display: flex; justify-content: space-between; gap: 20px; color: rgba(244,240,232,.55); font-size: 10px; }
+    .whatsapp-float { position: fixed; z-index: 40; right: 24px; bottom: 24px; width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; background: #277c55; color: white; box-shadow: 0 8px 25px rgba(0,0,0,.18); transition: transform .2s; }
+    .whatsapp-float:hover { transform: translateY(-3px); }
+    .whatsapp-float svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
+    .modal-backdrop { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(25,29,25,.55); backdrop-filter: blur(4px); }
+    .modal-backdrop.open { display: flex; }
+    .modal { position: relative; width: min(880px,100%); max-height: min(90vh,800px); overflow: auto; background: var(--white); box-shadow: 0 24px 80px rgba(0,0,0,.2); }
+    .modal-close { position: absolute; z-index: 4; top: 13px; right: 13px; width: 38px; height: 38px; display: grid; place-items: center; border: 0; border-radius: 50%; background: var(--white); color: var(--ink); font-size: 22px; }
+    .detail-modal { display: grid; grid-template-columns: 1fr 1fr; }
+    .detail-image { min-height: 520px; background: #e9e4d9; }
+    .detail-image img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; }
+    .detail-copy { padding: 58px 42px 38px; }
+    .detail-copy h2 { margin: 10px 0 14px; font-family: var(--serif); font-size: 38px; line-height: 1.1; font-weight: 400; }
+    .detail-copy p { color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .detail-spec { margin: 22px 0; padding: 17px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .detail-spec h4 { margin: 0 0 9px; font-size: 10px; text-transform: uppercase; letter-spacing: .14em; }
+    .detail-spec ul { margin: 0; padding-left: 17px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .interest-modal { width: min(570px,100%); padding: 42px; }
+    .interest-modal h2 { margin: 0 0 8px; font-family: var(--serif); font-size: 34px; font-weight: 400; }
+    .interest-modal p { color: var(--muted); font-size: 12px; }
+    .interest-list { margin: 22px 0; border-top: 1px solid var(--line); }
+    .interest-row { display: flex; justify-content: space-between; gap: 14px; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+    .interest-row button { border: 0; color: var(--rose); background: transparent; font-size: 11px; }
+    .empty-interest { padding: 20px 0; color: var(--muted); font-size: 12px; }
+    .toast { position: fixed; z-index: 120; left: 50%; bottom: 25px; padding: 12px 18px; background: var(--olive-dark); color: white; font-size: 12px; box-shadow: var(--shadow); opacity: 0; transform: translate(-50%,15px); pointer-events: none; transition: all .25s; }
+    .toast.show { opacity: 1; transform: translate(-50%,0); }
+    .search-panel { display: none; position: absolute; z-index: 55; top: 100%; left: 0; right: 0; padding: 20px 34px; background: var(--white); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+    .search-panel.open { display: block; }
+    .search-panel-inner { max-width: 720px; margin: auto; display: flex; gap: 12px; align-items: center; }
+    .search-panel input { flex: 1; border: 0; border-bottom: 1px solid var(--line); background: transparent; padding: 12px 4px; font-size: 15px; outline: none; }
+    .search-panel button { border: 0; background: var(--olive-dark); color: white; padding: 13px 20px; text-transform: uppercase; font-size: 10px; letter-spacing: .12em; font-weight: 800; }
+
+    @media (max-width: 1000px) {
+      .header-inner { grid-template-columns: 190px 1fr 145px; padding: 0 22px; }
+      .main-nav { gap: 18px; }
+      .main-nav a { font-size: 10px; }
+      .hero-inner { padding: 55px 24px; gap: 3%; }
+      .hero-frame { height: 420px; }
+      .section, .story-inner, .contact-section { padding-left: 24px; padding-right: 24px; }
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .catalog-layout { grid-template-columns: 180px 1fr; gap: 25px; }
+      .footer-main { padding-left: 24px; padding-right: 24px; }
+    }
+    @media (max-width: 720px) {
+      .announcement { font-size: 8px; letter-spacing: .1em; }
+      .header-inner { height: 70px; grid-template-columns: 1fr auto; padding: 0 18px; }
+      .brand-mark { width: 36px; height: 36px; font-size: 19px; }
+      .brand-name { font-size: 21px; }
+      .main-nav { display: none; position: absolute; top: 70px; left: 0; right: 0; padding: 14px 22px 22px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); flex-direction: column; align-items: stretch; gap: 4px; }
+      .main-nav.open { display: flex; }
+      .main-nav a { padding: 11px 0; border-bottom: 1px solid var(--line); }
+      .header-actions { gap: 2px; }
+      .icon-button { width: 37px; height: 37px; }
+      .mobile-toggle { display: grid; }
+      .hero-inner { min-height: auto; display: flex; flex-direction: column; align-items: stretch; gap: 32px; padding: 54px 20px 48px; }
+      .hero-copy { padding-left: 0; }
+      .hero h1 { font-size: clamp(48px,13vw,68px); max-width: 500px; }
+      .hero-copy p { font-size: 13px; }
+      .hero-art { min-height: 300px; }
+      .hero-frame { height: min(94vw,410px); width: 100%; }
+      .hero-stamp { width: 100px; height: 100px; right: 4px; bottom: 0; font-size: 14px; }
+      .hero-note { left: -10px; bottom: 20px; font-size: 8px; }
+      .promise-inner { padding: 16px 18px; grid-template-columns: 1fr; gap: 12px; }
+      .promise-item { justify-content: flex-start; font-size: 9px; }
+      .section { padding: 68px 20px; }
+      .section-heading { display: block; margin-bottom: 28px; }
+      .section-heading h2 { font-size: 42px; }
+      .section-heading p { margin-top: 14px; }
+      .collection-grid { grid-template-columns: 1fr; gap: 14px; }
+      .collection-card, .collection-card img { min-height: 330px; }
+      .collection-card-content { left: 22px; bottom: 22px; }
+      .collection-card-content h3 { font-size: 30px; }
+      .catalog-layout { display: block; }
+      .filter-panel { display: flex; overflow-x: auto; gap: 18px; padding: 0 0 14px; margin-bottom: 10px; border-top: 0; border-bottom: 1px solid var(--line); }
+      .filter-group { flex: 0 0 auto; min-width: 135px; margin: 0; padding: 0; border: 0; }
+      .filter-title { margin-bottom: 5px; font-size: 10px; }
+      .filter-option { padding: 4px 0; font-size: 10px; }
+      .filter-note { display: none; }
+      .catalog-toolbar { align-items: flex-start; flex-direction: column; gap: 9px; padding-bottom: 12px; }
+      .toolbar-controls { width: 100%; justify-content: space-between; }
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px 12px; }
+      .product-photo { aspect-ratio: .78; }
+      .product-name { font-size: 17px; }
+      .product-caption { font-size: 10px; }
+      .quick-view { display: none; }
+      .product-badge { top: 8px; left: 8px; padding: 6px 7px; font-size: 7px; }
+      .wish-button { right: 7px; top: 7px; width: 29px; height: 29px; }
+      .product-bottom { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .story-inner { padding: 68px 20px; grid-template-columns: 1fr; gap: 44px; }
+      .story-visual { min-height: 380px; }
+      .story-visual-main { width: 78%; height: 310px; }
+      .story-visual-small { width: 47%; height: 210px; border-width: 6px; }
+      .story-copy h2 { font-size: 44px; }
+      .process-grid { grid-template-columns: repeat(2,1fr); gap: 12px; }
+      .process-step img { height: 140px; }
+      .process-step h3 { font-size: 17px; }
+      .process-step p { font-size: 10px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .value-card { padding: 24px; }
+      .contact-section { padding: 62px 20px; }
+      .contact-card { padding: 36px 24px; grid-template-columns: 1fr; gap: 20px; }
+      .contact-card::after { right: -10px; top: 4px; font-size: 180px; }
+      .contact-card h2 { font-size: 41px; }
+      .contact-card .btn { width: fit-content; }
+      .footer-main { grid-template-columns: 1fr 1fr; gap: 34px 22px; padding: 48px 20px 36px; }
+      .footer-brand { grid-column: 1/-1; }
+      .footer-bottom { padding: 17px 20px 22px; flex-direction: column; gap: 5px; }
+      .whatsapp-float { right: 16px; bottom: 16px; width: 49px; height: 49px; }
+      .detail-modal { grid-template-columns: 1fr; }
+      .detail-image, .detail-image img { min-height: 280px; height: 280px; }
+      .detail-copy { padding: 30px 24px 28px; }
+      .detail-copy h2 { font-size: 31px; }
+      .interest-modal { padding: 38px 24px 28px; }
+      .search-panel { padding: 14px 18px; }
+      .search-panel-inner { gap: 8px; }
+      .search-panel button { padding: 12px 13px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">Handcrafted with purpose · Berakar dari potensi lokal Kubu Raya</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#beranda" aria-label="Ray Kreasi - Beranda">
+        <span class="brand-mark">R<span style="font-size:13px">K</span></span>
+        <span class="brand-copy"><span class="brand-name">Ray Kreasi</span><span class="brand-sub">Handcrafted Eco-Fashion</span></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#koleksi">Koleksi Tas</a>
+        <a href="#serat-nanas">Serat Nanas</a>
+        <a href="#cerita">Cerita Kami</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="searchToggle" aria-label="Buka pencarian" title="Cari produk">
+          <svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+        <button class="icon-button" id="interestToggle" aria-label="Lihat daftar minat" title="Daftar minat">
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l1 13H4L5 8Z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>
+          <span class="count-dot" id="interestCount" style="display:none">0</span>
+        </button>
+        <button class="icon-button mobile-toggle" id="mobileToggle" aria-label="Buka menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel">
+      <div class="search-panel-inner">
+        <input id="searchInput" type="search" placeholder="Cari tas serat nanas, tas anyam..." aria-label="Cari produk" />
+        <button id="searchSubmit">Cari</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Karya lokal · Cerita berkelanjutan</span>
+          <h1>Aksesoris yang punya <em>cerita.</em></h1>
+          <p>Merangkai kreativitas menjadi tas handmade yang istimewa. Dari anyaman penuh karakter hingga serat daun nanas yang diolah menjadi karya eco-fashion.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#koleksi">Jelajahi koleksi <span class="arrow">↗</span></a>
+            <a class="btn btn-outline" href="#cerita">Kenali Ray Kreasi</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <span class="hero-note">Crafted slowly · Worn proudly · Made locally</span>
+          <div class="hero-frame">
+            <img src="assets/tas-anyam-natural.jpg" alt="Tas anyam handmade berbahan serat daun nanas" />
+          </div>
+          <div class="hero-stamp">Made with care<span>Ray Kreasi · Kubu Raya</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise-bar" aria-label="Keunggulan Ray Kreasi">
+      <div class="promise-inner">
+        <div class="promise-item"><svg viewBox="0 0 24 24"><path d="M12 3c4 3 7 6 7 10a7 7 0 0 1-14 0c0-4 3-7 7-10Z"></path><path d="M9 15c1-2 3-3 6-4"></path></svg>Material lokal & lebih bertanggung jawab</div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><path d="M4 19c4-1 5-5 5-9 4 0 7 3 7 7 0 2-1 4-4 4H4v-2Z"></path><path d="M9 10c1-3 4-5 8-5 0 4-2 7-6 8"></path></svg>Dibuat dengan sentuhan tangan</div>
+        <div class="promise-item"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"></path><path d="M7 4v16M17 4v16"></path><path d="m4 8 3-4 3 4 3-4 4 4 3-4"></path></svg>Desain personal & dapat dikustom</div>
+      </div>
+    </section>
+
+    <section class="collection-intro" id="koleksi">
+      <div class="section">
+        <div class="section-heading">
+          <div><span class="eyebrow">Temukan gaya khasmu</span><h2>Koleksi pilihan</h2></div>
+          <p>Dua dunia kerajinan dalam satu rumah kreatif. Pilih tas yang paling dekat dengan keseharian dan karakter Anda.</p>
+        </div>
+        <div class="collection-grid">
+          <a class="collection-card" href="#produk" data-filter-link="handmade">
+            <img src="assets/crochet-black-chain.jpg" alt="Tas handmade hitam dengan detail rantai" />
+            <div class="collection-card-content"><small>Handmade collection</small><h3>Anyam & Crochet</h3><span class="text-link">Lihat koleksi <span>↗</span></span></div>
+          </a>
+          <a class="collection-card" href="#produk" data-filter-link="serat">
+            <img src="assets/handbag-serat-nanas.jpg" alt="Hand bag serat daun nanas warna natural" />
+            <div class="collection-card-content"><small>Eco-fashion collection</small><h3>Pineapple Fiber</h3><span class="text-link">Lihat koleksi <span>↗</span></span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="produk">
+      <div class="section-heading">
+        <div><span class="eyebrow">Koleksi handmade & eco-fashion</span><h2>Temukan tas favoritmu</h2></div>
+        <p>Jelajahi model yang tersedia. Setiap karya dibuat dengan perhatian pada detail, material, dan karakter handmade.</p>
+      </div>
+      <div class="catalog-layout">
+        <aside class="filter-panel" aria-label="Filter koleksi">
+          <div class="filter-group">
+            <div class="filter-title">Kategori <button id="clearFilters">Reset</button></div>
+            <label class="filter-option"><input type="radio" name="category" value="all" checked /> Semua koleksi</label>
+            <label class="filter-option"><input type="radio" name="category" value="serat" /> Pineapple fiber</label>
+            <label class="filter-option"><input type="radio" name="category" value="handmade" /> Anyam & crochet</label>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Karakter</div>
+            <label class="filter-option"><input type="checkbox" class="tag-filter" value="natural" /> Nuansa natural</label>
+            <label class="filter-option"><input type="checkbox" class="tag-filter" value="statement" /> Statement piece</label>
+            <label class="filter-option"><input type="checkbox" class="tag-filter" value="daily" /> Daily companion</label>
+          </div>
+          <p class="filter-note">Harga dan ketersediaan dikonfirmasi saat pemesanan. Hubungi kami untuk informasi koleksi terbaru dan opsi custom.</p>
+        </aside>
+        <div>
+          <div class="catalog-toolbar">
+            <div class="results-count"><span id="resultCount">6</span> karya ditampilkan</div>
+            <div class="toolbar-controls">
+              <label for="sortSelect">Urutkan:</label>
+              <select id="sortSelect" aria-label="Urutkan produk"><option value="featured">Pilihan Ray Kreasi</option><option value="az">Nama A–Z</option><option value="za">Nama Z–A</option></select>
+            </div>
+          </div>
+          <div class="product-grid" id="productGrid" aria-live="polite"></div>
+          <div class="empty-state" id="emptyState"><strong>Belum ada koleksi yang cocok.</strong>Coba ubah kategori atau kata kunci pencarian.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-section" id="cerita">
+      <div class="story-inner">
+        <div class="story-visual">
+          <img class="story-visual-main" src="assets/kebun-nanas.jpg" alt="Hamparan tanaman nanas di Kubu Raya" />
+          <img class="story-visual-small" src="assets/tas-anyam-natural.jpg" alt="Detail tas anyam serat daun nanas" />
+        </div>
+        <div class="story-copy">
+          <span class="eyebrow">Berawal dari potensi sekitar</span>
+          <h2>Dari daun yang terabaikan, menjadi <em>karya yang dikenakan.</em></h2>
+          <p>Ray Kreasi adalah UMKM kreatif dari Kabupaten Kubu Raya, Kalimantan Barat. Kami mengembangkan tas anyam handmade dan produk eco-fashion berbahan serat daun nanas—mengolah potensi lokal menjadi karya bernilai guna dan bernilai jual.</p>
+          <p>Melalui keterampilan kerajinan dan pengembangan desain, kami ingin menghadirkan produk yang mempertemukan kearifan lokal, kreativitas modern, serta peluang ekonomi yang lebih berkelanjutan.</p>
+          <a class="btn btn-outline" href="#serat-nanas">Jelajahi kisah serat nanas <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="serat-nanas">
+      <div class="section">
+        <div class="section-heading">
+          <div><span class="eyebrow">Pineapple fiber journey</span><h2>Setiap serat punya proses</h2></div>
+          <p>Serat daun nanas diolah melalui tahapan teliti sebelum menjadi material utama tas. Proses ini menjaga karakter alami serat dan memberi nilai baru pada limbah pertanian.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step"><img src="assets/proses-pencucian.jpg" alt="Proses membersihkan daun nanas" /><span class="step-number">01</span><h3>Seleksi & pembersihan</h3><p>Daun nanas tua dipilih, dicuci, dan dibersihkan dari durinya.</p></article>
+          <article class="process-step"><img src="assets/proses-penyisiran.jpg" alt="Proses menyisir serat nanas" /><span class="step-number">02</span><h3>Ekstraksi & penyisiran</h3><p>Serat dipisahkan dari daun, dicuci kembali, dikeringkan, lalu disisir agar tidak kusut.</p></article>
+          <article class="process-step"><img src="assets/proses-pemilinan.jpg" alt="Proses memilin serat nanas menjadi benang" /><span class="step-number">03</span><h3>Pemilinan serat</h3><p>Serat dikumpulkan dan dipilin menjadi untaian menyerupai benang atau tali.</p></article>
+          <article class="process-step"><img src="assets/proses-penganyaman.jpg" alt="Proses menganyam serat nanas" /><span class="step-number">04</span><h3>Finishing & anyaman</h3><p>Lilin lebah membantu serat lebih mudah dibentuk sebelum proses penganyaman.</p></article>
+        </div>
+        <p class="process-note">Catatan: proses dan material produk mengikuti dokumentasi produksi Ray Kreasi. Struktur produk tertentu juga menggunakan media plastic canvas dan kain furing tenun serat nanas.</p>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="section">
+        <div class="section-heading">
+          <div><span class="eyebrow">Nilai di balik setiap karya</span><h2>Lebih dari sekadar tas</h2></div>
+          <p>Kami percaya produk yang baik bukan hanya tentang bentuk, tetapi juga cerita, keterampilan, dan dampak dari proses pembuatannya.</p>
+        </div>
+        <div class="values-grid">
+          <article class="value-card"><span class="value-icon">✳</span><h3>Potensi lokal</h3><p>Memanfaatkan potensi daun nanas dan keterampilan kerajinan dari lingkungan sekitar Kubu Raya.</p></article>
+          <article class="value-card"><span class="value-icon">⌁</span><h3>Dibuat dengan tangan</h3><p>Detail dan karakter handmade memberi sentuhan personal pada setiap produk.</p></article>
+          <article class="value-card"><span class="value-icon">↗</span><h3>Ruang untuk bertumbuh</h3><p>Mendorong pengembangan keterampilan, pemberdayaan masyarakat, dan peluang usaha kreatif.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontak">
+      <div class="contact-card">
+        <div><span class="eyebrow">Mari terhubung</span><h2>Temukan karya yang paling cocok untukmu.</h2><p>Tanyakan detail produk, ketersediaan koleksi, atau diskusikan warna dan model custom bersama Ray Kreasi.</p></div>
+        <a class="btn btn-primary" id="contactButton" href="https://wa.me/6285822498909?text=Halo%20Ray%20Kreasi%2C%20saya%20ingin%20bertanya%20tentang%20koleksi%20tas." target="_blank" rel="noopener">Hubungi via WhatsApp <span class="arrow">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#beranda"><span class="brand-mark" style="border-color:rgba(214,194,154,.65);color:#d6c29a">R<span style="font-size:13px">K</span></span><span class="brand-copy"><span class="brand-name">Ray Kreasi</span><span class="brand-sub">Handcrafted Eco-Fashion</span></span></a>
+        <p>Menghadirkan tas handmade dan eco-fashion dari kreativitas lokal, dengan perhatian pada material, proses, dan cerita di balik setiap karya.</p>
+      </div>
+      <div class="footer-col"><h4>Jelajahi</h4><a href="#koleksi">Koleksi Tas</a><a href="#produk">Katalog Produk</a><a href="#serat-nanas">Pineapple Fiber</a><a href="#cerita">Cerita Kami</a></div>
+      <div class="footer-col"><h4>Kontak</h4><a href="https://instagram.com/raykreasi.id" target="_blank" rel="noopener">Instagram @raykreasi.id</a><a href="https://wa.me/6285822498909" target="_blank" rel="noopener">WhatsApp Ray Kreasi</a><p>Desa Sungai Malaya, Kecamatan Sungai Ambawang, Kabupaten Kubu Raya, Kalimantan Barat</p></div>
+      <div class="footer-col"><h4>Informasi</h4><p>Produk dibuat secara handmade. Detail harga, ketersediaan, estimasi pengerjaan, dan pengiriman dikonfirmasi melalui WhatsApp.</p><a href="#kontak">Konsultasi pesanan ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="yearNow"></span> Ray Kreasi. Seluruh hak cipta dilindungi.</span><span>Dirangkai dengan kreativitas dari Kubu Raya, Kalimantan Barat.</span></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/6285822498909?text=Halo%20Ray%20Kreasi%2C%20saya%20ingin%20melihat%20koleksi%20tas." target="_blank" rel="noopener" aria-label="Chat Ray Kreasi di WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.7 7.1L4 20l1.3-4.1A8 8 0 1 1 20 11.6Z"></path><path d="M9 8.5c.3-.5.6-.5.9-.5l.6 1.4c.1.3 0 .4-.2.7l-.5.6c.7 1.3 1.7 2.2 3.1 2.8l.6-.7c.2-.2.4-.3.7-.2l1.4.7c.3.1.3.4.2.7-.2.7-.9 1.3-1.7 1.3-2.5-.1-5.9-3-6.3-5.4-.1-.6.3-1.2.8-1.4Z"></path></svg>
+  </a>
+
+  <div class="modal-backdrop" id="detailBackdrop" role="dialog" aria-modal="true" aria-label="Detail produk">
+    <div class="modal detail-modal"><button class="modal-close" data-close="detail" aria-label="Tutup">×</button><div class="detail-image"><img id="detailImage" src="" alt="" /></div><div class="detail-copy"><span class="product-category" id="detailCategory"></span><h2 id="detailTitle"></h2><p id="detailDescription"></p><div class="detail-spec"><h4>Detail produk</h4><ul id="detailSpecs"></ul></div><button class="btn btn-primary" id="detailOrder">Tanyakan produk ini <span class="arrow">↗</span></button></div></div>
+  </div>
+  <div class="modal-backdrop" id="interestBackdrop" role="dialog" aria-modal="true" aria-label="Daftar minat produk">
+    <div class="modal interest-modal"><button class="modal-close" data-close="interest" aria-label="Tutup">×</button><span class="eyebrow">Koleksi pilihanmu</span><h2>Daftar minat</h2><p>Simpan beberapa produk yang ingin ditanyakan, lalu kirim semuanya ke Ray Kreasi melalui WhatsApp.</p><div class="interest-list" id="interestList"></div><button class="btn btn-primary" style="width:100%" id="sendInterest">Kirim daftar via WhatsApp <span class="arrow">↗</span></button></div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    // Ubah nomor WhatsApp di sini jika nomor kontak resmi berubah.
+    const WHATSAPP_NUMBER = '6285822498909';
+    const products = [
+      {
+        id: 'shoulder-palf', name: 'Shoulder Bag Serat Nanas', category: 'serat', categoryLabel: 'Pineapple Fiber',
+        image: 'assets/tas-bahu-serat-nanas.jpg', badge: 'Eco Series', caption: 'Tas bahu · Anyaman serat alami', tags: ['natural','daily'],
+        description: 'Tas bahu berbahan serat daun nanas dengan bentuk trapesium dan detail motif tulang ikan. Bagian depan dihiasi aksen pita dari serat dan kain tenun serat daun nanas.',
+        specs: ['Bentuk trapesium; alas bawah 19,5 cm, alas atas 25,5 cm, tinggi 21 cm.','Penutup atas berbentuk katup dengan kancing bunga.','Bagian dalam dilapisi kain tenun berbahan serat daun nanas.','Tali tas sekitar 50 cm untuk dikenakan di bahu.']
+      },
+      {
+        id: 'handbag-palf', name: 'Hand Bag Serat Nanas', category: 'serat', categoryLabel: 'Pineapple Fiber',
+        image: 'assets/handbag-serat-nanas.jpg', badge: 'Eco Series', caption: 'Tas tangan · Natural woven', tags: ['natural','statement'],
+        description: 'Hand bag persegi panjang dengan detail kepang berbentuk bunga dan aksen tassel. Kain tenun serat daun nanas digunakan sebagai lapisan bagian dalam.',
+        specs: ['Ukuran panjang 22,5 cm dan tinggi 16 cm.','Panjang tali tas 21 cm.','Penutup dilengkapi katup magnet untuk memudahkan buka-tutup.','Aksen kepang berbentuk bunga dan tassel bola rumbai.']
+      },
+      {
+        id: 'natural-pouch', name: 'Natural Fiber Handwoven', category: 'serat', categoryLabel: 'Pineapple Fiber',
+        image: 'assets/tas-anyam-natural.jpg', badge: 'Natural Tone', caption: 'Anyaman natural · Handmade', tags: ['natural','daily'],
+        description: 'Karya anyaman bernuansa natural yang menonjolkan tekstur serat dan pola geometris. Silakan hubungi kami untuk detail model dan ketersediaan.',
+        specs: ['Bahan utama dan detail mengikuti model pada foto.','Dibuat dengan pendekatan kerajinan tangan.','Ketersediaan dan opsi custom dikonfirmasi melalui WhatsApp.']
+      },
+      {
+        id: 'crochet-black', name: 'Crochet Chain Bag', category: 'handmade', categoryLabel: 'Anyam & Crochet',
+        image: 'assets/crochet-black-chain.jpg', badge: 'Handmade', caption: 'Black & ivory · Chain detail', tags: ['statement','daily'],
+        description: 'Tas handmade dengan permainan warna hitam dan ivory, detail rantai, serta aksen pita. Salah satu karakter koleksi tas anyam handmade Ray Kreasi.',
+        specs: ['Dibuat secara handmade.','Pilihan warna dan model dapat didiskusikan untuk pesanan custom.','Detail ukuran dan ketersediaan dikonfirmasi sebelum pemesanan.']
+      },
+      {
+        id: 'crochet-mustard', name: 'Mini Woven Bag', category: 'handmade', categoryLabel: 'Anyam & Crochet',
+        image: 'assets/crochet-mini-mustard.jpg', badge: 'Handmade', caption: 'Mustard accent · Mini bag', tags: ['statement'],
+        description: 'Tas mini handmade dengan kombinasi warna natural dan aksen mustard. Detail pita memberi sentuhan manis pada tampilan tas.',
+        specs: ['Dibuat secara handmade.','Model dan kombinasi warna dapat disesuaikan melalui custom order.','Harga dan ketersediaan dikonfirmasi melalui WhatsApp.']
+      },
+      {
+        id: 'pink-handmade', name: 'Blush Handmade Bag', category: 'handmade', categoryLabel: 'Anyam & Crochet',
+        image: 'assets/handmade-pink-bag.jpg', badge: 'Handmade', caption: 'Blush tone · Statement piece', tags: ['statement'],
+        description: 'Tas handmade bernuansa blush dengan aksen dekoratif yang memberi karakter feminin dan unik pada penampilan.',
+        specs: ['Dibuat secara handmade.','Cocok untuk melengkapi gaya personal dan acara tertentu.','Detail produk dan stok dapat ditanyakan kepada tim Ray Kreasi.']
+      },
+      {
+        id: 'floral-tote', name: 'Floral Handmade Tote', category: 'handmade', categoryLabel: 'Anyam & Crochet',
+        image: 'assets/handmade-floral-tote.jpg', badge: 'Handmade', caption: 'Floral motif · Everyday bag', tags: ['daily'],
+        description: 'Koleksi tas handmade bermotif floral dengan nuansa cerah. Untuk pilihan model, warna, dan ketersediaan terbaru, silakan berkonsultasi dengan Ray Kreasi.',
+        specs: ['Koleksi kerajinan handmade.','Pilihan motif mengikuti ketersediaan material.','Tanyakan detail ukuran dan pemesanan melalui WhatsApp.']
+      }
+    ];
+
+    const state = { category: 'all', tags: [], query: '', sort: 'featured', interests: [] };
+    const productGrid = document.getElementById('productGrid');
+    const resultCount = document.getElementById('resultCount');
+    const emptyState = document.getElementById('emptyState');
+    const toast = document.getElementById('toast');
+    let toastTimer;
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+    }
+    function whatsappLink(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    }
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 2300);
+    }
+    function filteredProducts() {
+      let list = products.filter(product => {
+        const categoryMatch = state.category === 'all' || product.category === state.category;
+        const tagMatch = state.tags.length === 0 || state.tags.every(tag => product.tags.includes(tag));
+        const q = state.query.trim().toLowerCase();
+        const queryMatch = !q || [product.name, product.categoryLabel, product.caption, product.description].join(' ').toLowerCase().includes(q);
+        return categoryMatch && tagMatch && queryMatch;
+      });
+      if (state.sort === 'az') list.sort((a,b) => a.name.localeCompare(b.name, 'id'));
+      if (state.sort === 'za') list.sort((a,b) => b.name.localeCompare(a.name, 'id'));
+      return list;
+    }
+    function renderProducts() {
+      const list = filteredProducts();
+      resultCount.textContent = list.length;
+      emptyState.style.display = list.length ? 'none' : 'block';
+      productGrid.innerHTML = list.map(product => `
+        <article class="product-card">
+          <div class="product-photo">
+            <span class="product-badge">${escapeHtml(product.badge)}</span>
+            <button class="wish-button ${state.interests.includes(product.id) ? 'active' : ''}" data-interest="${product.id}" aria-label="${state.interests.includes(product.id) ? 'Hapus dari' : 'Tambah ke'} daftar minat">${state.interests.includes(product.id) ? '♥' : '♡'}</button>
+            <img src="${product.image}" alt="${escapeHtml(product.name)}" loading="lazy" />
+            <button class="quick-view" data-detail="${product.id}">Lihat detail produk</button>
+          </div>
+          <div class="product-info">
+            <div class="product-category">${escapeHtml(product.categoryLabel)}</div>
+            <h3 class="product-name">${escapeHtml(product.name)}</h3>
+            <div class="product-caption">${escapeHtml(product.caption)}</div>
+            <div class="product-bottom"><span class="price-text">Hubungi untuk harga</span><button class="order-mini" data-detail="${product.id}">Detail ↗</button></div>
+          </div>
+        </article>`).join('');
+    }
+    function openDetail(productId) {
+      const product = products.find(item => item.id === productId);
+      if (!product) return;
+      document.getElementById('detailImage').src = product.image;
+      document.getElementById('detailImage').alt = product.name;
+      document.getElementById('detailCategory').textContent = product.categoryLabel;
+      document.getElementById('detailTitle').textContent = product.name;
+      document.getElementById('detailDescription').textContent = product.description;
+      document.getElementById('detailSpecs').innerHTML = product.specs.map(spec => `<li>${escapeHtml(spec)}</li>`).join('');
+      document.getElementById('detailOrder').onclick = () => window.open(whatsappLink(`Halo Ray Kreasi, saya tertarik dengan ${product.name}. Mohon informasi harga dan ketersediaannya.`), '_blank', 'noopener');
+      document.getElementById('detailBackdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(type) {
+      document.getElementById(type === 'detail' ? 'detailBackdrop' : 'interestBackdrop').classList.remove('open');
+      if (!document.querySelector('.modal-backdrop.open')) document.body.style.overflow = '';
+    }
+    function toggleInterest(productId) {
+      if (state.interests.includes(productId)) {
+        state.interests = state.interests.filter(id => id !== productId);
+        showToast('Produk dihapus dari daftar minat.');
+      } else {
+        state.interests.push(productId);
+        showToast('Produk ditambahkan ke daftar minat.');
+      }
+      renderProducts();
+      updateInterestCount();
+    }
+    function updateInterestCount() {
+      const dot = document.getElementById('interestCount');
+      dot.textContent = state.interests.length;
+      dot.style.display = state.interests.length ? 'grid' : 'none';
+    }
+    function renderInterestList() {
+      const target = document.getElementById('interestList');
+      const list = state.interests.map(id => products.find(p => p.id === id)).filter(Boolean);
+      target.innerHTML = list.length ? list.map(product => `<div class="interest-row"><span>${escapeHtml(product.name)}</span><button data-remove-interest="${product.id}">Hapus</button></div>`).join('') : '<div class="empty-interest">Belum ada produk yang disimpan. Tekan ikon hati pada produk untuk menambahkannya.</div>';
+      document.getElementById('sendInterest').disabled = !list.length;
+      document.getElementById('sendInterest').style.opacity = list.length ? '1' : '.5';
+    }
+    productGrid.addEventListener('click', event => {
+      const detailButton = event.target.closest('[data-detail]');
+      const interestButton = event.target.closest('[data-interest]');
+      if (detailButton) openDetail(detailButton.dataset.detail);
+      if (interestButton) toggleInterest(interestButton.dataset.interest);
+    });
+    document.querySelectorAll('input[name="category"]').forEach(input => input.addEventListener('change', event => {
+      state.category = event.target.value; renderProducts();
+    }));
+    document.querySelectorAll('.tag-filter').forEach(input => input.addEventListener('change', () => {
+      state.tags = [...document.querySelectorAll('.tag-filter:checked')].map(el => el.value); renderProducts();
+    }));
+    document.getElementById('sortSelect').addEventListener('change', event => { state.sort = event.target.value; renderProducts(); });
+    document.getElementById('clearFilters').addEventListener('click', () => {
+      state.category = 'all'; state.tags = []; state.query = '';
+      document.querySelector('input[name="category"][value="all"]').checked = true;
+      document.querySelectorAll('.tag-filter').forEach(el => el.checked = false);
+      document.getElementById('searchInput').value = '';
+      renderProducts();
+    });
+    document.querySelectorAll('[data-filter-link]').forEach(link => link.addEventListener('click', () => {
+      state.category = link.dataset.filterLink === 'serat' ? 'serat' : 'handmade';
+      document.querySelector(`input[name="category"][value="${state.category}"]`).checked = true;
+      renderProducts();
+    }));
+    document.getElementById('searchToggle').addEventListener('click', () => {
+      const panel = document.getElementById('searchPanel');
+      panel.classList.toggle('open');
+      if (panel.classList.contains('open')) document.getElementById('searchInput').focus();
+    });
+    function doSearch() {
+      state.query = document.getElementById('searchInput').value;
+      renderProducts();
+      document.getElementById('searchPanel').classList.remove('open');
+      document.getElementById('produk').scrollIntoView({behavior:'smooth'});
+    }
+    document.getElementById('searchSubmit').addEventListener('click', doSearch);
+    document.getElementById('searchInput').addEventListener('keydown', event => { if (event.key === 'Enter') doSearch(); });
+    document.getElementById('interestToggle').addEventListener('click', () => {
+      renderInterestList(); document.getElementById('interestBackdrop').classList.add('open'); document.body.style.overflow = 'hidden';
+    });
+    document.getElementById('interestList').addEventListener('click', event => {
+      const button = event.target.closest('[data-remove-interest]');
+      if (button) { state.interests = state.interests.filter(id => id !== button.dataset.removeInterest); renderInterestList(); renderProducts(); updateInterestCount(); }
+    });
+    document.getElementById('sendInterest').addEventListener('click', () => {
+      const names = state.interests.map(id => products.find(p => p.id === id)?.name).filter(Boolean);
+      if (!names.length) return;
+      const message = `Halo Ray Kreasi, saya tertarik dengan produk berikut:\n${names.map((name,i) => `${i+1}. ${name}`).join('\n')}\nMohon informasi harga dan ketersediaannya. Terima kasih.`;
+      window.open(whatsappLink(message), '_blank', 'noopener');
+    });
+    document.getElementById('detailBackdrop').addEventListener('click', event => { if (event.target.id === 'detailBackdrop') closeModal('detail'); });
+    document.getElementById('interestBackdrop').addEventListener('click', event => { if (event.target.id === 'interestBackdrop') closeModal('interest'); });
+    document.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => closeModal(button.dataset.close)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') { closeModal('detail'); closeModal('interest'); document.getElementById('searchPanel').classList.remove('open'); } });
+    document.getElementById('mobileToggle').addEventListener('click', () => {
+      const nav = document.getElementById('mainNav'); nav.classList.toggle('open');
+      document.getElementById('mobileToggle').setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
+    });
+    document.querySelectorAll('#mainNav a').forEach(link => link.addEventListener('click', () => document.getElementById('mainNav').classList.remove('open')));
+    document.getElementById('yearNow').textContent = new Date().getFullYear();
+    renderProducts(); updateInterestCount();
+  </script>
+</body>
+</html>
